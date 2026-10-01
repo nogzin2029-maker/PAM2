@@ -1,13 +1,6 @@
-import React, { useState } from 'react';
-import LoginScreen from './screens/LoginScreen';
-import HomeScreen from './screens/HomeScreen';
+import React from 'react';
+import StackNavigator from './navigation/StackNavigator';
 
 export default function App() {
-  const [loggedIn, setLoggedIn] = useState(false);
-
-  if (!loggedIn) {
-    return <LoginScreen onLogin={() => setLoggedIn(true)} />;
-  }
-
-  return <HomeScreen />;
+  return <StackNavigator />;
 }
